@@ -27,20 +27,35 @@ img {
 }
 
 /* GENERAL STYLES */
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
     text-transform: uppercase;
     margin: 0;
+    letter-spacing: .2rem;
+}
+
+h2 {
+    font-size: 6rem;
+    font-weight: 700;
 }
 
 h3 {
-    font-size: 18px;
+    font-size: 2.4rem;
+}
+
+h4 {
+    font-size: 1.8rem;
+}
+
+h5 {
+    font-size: 1.6rem;
 }
 
 p {
+    color: #666666;
     margin: 0;
-    font-size: 14px;
+    line-height: 1.8;
 }
 
 a {
@@ -55,17 +70,12 @@ ul {
 }
 
 /* HEADER STYLES */
-header {
-    background: url(../assets/home-1.jpeg) center/cover no-repeat;
-    min-height: 100vh;
-}
-
 header .wrapper {
     position: relative;
 }
 
 header h1 {
-    font-size: 37.5px;
+    font-size: 3.75rem;
     font-weight: 700;
     position: absolute;
     top: 15%;
@@ -99,7 +109,7 @@ header h1 {
 }
 
 .mainNav svg {
-    font-size: 20px;
+    font-size: 2rem;
 }
 
 .mainNavR .navShopping {
@@ -111,11 +121,11 @@ header h1 {
     top: 10px;
     left: 10px;
     color: #c3dab7;
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 a {
-    font-size: 14px;
+    font-size: 1.4rem;
     padding: 10px 0;
 }
 
@@ -123,8 +133,100 @@ a:hover {
     text-decoration: line-through;
 }
 
-/* MAIN STYLES */
-    /* INTRO SECTION STYLES */
+/* FOOTER STYLES */
+footer {
+    background-color: #333333;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+}
+
+footer .wrapper {
+    padding: 75px 0;
+}
+
+footer .wrapper > div {
+    float: left;
+    width: calc(100% / 3)
+}
+
+footer h5 {
+    font-size: 1.8rem;
+    padding-bottom: 25px;
+}
+
+footer p,
+footer svg {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.4rem;
+    letter-spacing: .05rem;
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+footer .contactUs {
+    text-align: left;
+}
+
+.contactUs ul.social li {
+    float: left;
+    padding-top: 20px;
+    padding-right: 25px;
+}
+
+footer .recentPosts ul {
+    list-style-type: initial;
+    text-align: left;
+    padding-left: 100px;
+}
+
+footer .recentPosts li {
+    font-size: 1.4rem;
+    padding-bottom: 10px;
+    letter-spacing: .05rem;
+}
+
+footer .subscription {
+    text-align: right;
+}
+
+footer .subscription form {
+    margin-top: 25px;
+}
+
+footer input[type=email] {
+    color: #666666;
+    font-size: 1.3rem;
+    padding: 15px 20px;
+    border: none;
+}
+
+footer input[type=submit] {
+    background: #c3dab7 url(../assets/arrow.png) center/50% no-repeat;
+    border: none;
+    float: right;
+    width: 48px;
+    height: 48px;
+}
+
+footer h1 {
+    clear: both;
+    padding: 50px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1.4rem;
+}
+
+/* - - - - - - - - - - INDEX.HTML STYLES - - - - - - - - - - */
+
+    /* HEADER STYLES */
+header.indexPage {
+    background: url(../assets/home-1.jpeg) center/cover no-repeat;
+    min-height: 100vh;
+}
+
+    /* MAIN STYLES */
+        /* INTRO SECTION STYLES */
 section.intro {
     background-color: #c3dab7;
     text-align: center;
@@ -164,5 +266,286 @@ section.intro .wrapper {
 }
 
 .introText p {
+    color: #000;
+    font-size: 1.4rem;
     padding: 15px;
 }
+
+        /* GALLERY SECTION STYLES */
+section.gallery .wrapper {
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+}
+
+.galleryCarousel::before,
+.galleryCarousel::after {
+    font-size: 7rem;
+    position: absolute;
+    top: 50%;
+}
+
+.galleryCarousel::before{
+    content: "‹";
+    left: 0;
+}
+
+.galleryCarousel::after {
+    content: "›";
+    right: 0;
+}
+
+.galleryCarousel:hover::before,
+.galleryCarousel:hover::after {
+    color: #999999;
+}
+
+.galleryCell img {
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.galleryCell p {
+    padding: 40px 200px 0px 200px;
+    font-style: italic;
+}
+
+        /* ASSETS ARTICLE STYLES */
+article.assets {
+    background: url(../assets/home-4.jpeg) center/cover no-repeat;
+    height: 100vh;
+    padding: 100px 25px;
+    position: relative;
+}
+
+article.assets .assetsL, 
+article.assets .assetsR {
+    float: right;
+    width: calc(50% / 2 - 50px);
+    margin: 50px 0 0 50px;
+}
+
+.assetsDescription {
+    padding: 5px 5px 100px 5px;
+}
+
+.assetsDescription:last-child {
+    padding-bottom: 0;
+}
+
+.assetsDescription p {
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+
+article.assets ul li {
+    position: relative;
+}
+
+.assetsDescription .assetsIcon {
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    left: -70px;
+}
+
+.assetsDescription svg {
+    font-size: 20px;
+    position: absolute;
+    top: 13px;
+    right: 12px;
+}
+
+.assetsR .assetsDescription:first-child svg {
+    right: 16px;
+}
+
+.assetsR .assetsDescription:nth-child(2) svg {
+    top: 12px;
+    right: 13px;
+}
+
+.assetsL .assetsDescription:nth-child(2) svg {
+    right: 11px;
+}
+
+        /* TEAM SECTION STYLES */
+section.team .wrapper {
+    clear: both;
+    padding: 100px 0;
+    text-align: center;
+}
+
+section.team h3 {
+    margin: 25px;
+}
+
+section.team .gridTop,
+section.team .gridBottom {
+    padding-top: 25px;
+}
+
+section.team .gridTop .topR,
+.gridTop .topR > div,
+section.team .gridBottom > div,
+.gridBottom .bottomL > div,
+.gridBottom .bottomR > div {
+    float: left;
+    width: 50%;
+}
+
+section.team .gridTop .topL {
+    float: left;
+    width: calc(50% - 25px);
+}
+
+.gridTop .topL {
+    height: 270px;
+    margin-right: 25px;
+    background-color: #f6f6f6;
+    text-align: left;
+    padding: 110px 45px 45px 45px;
+}
+
+.gridTop p {
+    font-size: 1.4rem;
+    padding-top: 20px;
+}
+
+.gridBottom .bottomR h5 {
+    padding: 100px 40px;
+}
+
+        /* PORTFOLIO SECTION STYLES */
+section.portfolio {
+    background: #c3dab7;
+    clear: both;
+    text-align: center
+}
+
+section.portfolio > div {
+    float: left;
+    width: 50%;
+}
+
+section.portfolio .portfolioL {
+    padding: 15% 100px;
+}
+
+.portfolioL p {
+    font-size: 1.4rem;
+    padding: 50px 0 70px 0;
+}
+
+.portfolioL a {
+    background: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    letter-spacing: .05rem;
+    text-transform: uppercase;
+    padding: 20px;
+}
+
+.portfolioL a:hover {
+    text-decoration: none;
+}
+
+/* - - - - - - - - - - CONTACT.HTML STYLES - - - - - - - - - - */
+main.contactPage .wrapper {
+    position: relative;
+}
+
+main.contactPage h2 {
+    position: absolute;
+    top: -250px;
+    left: 0;
+}
+
+main.contactPage h4 {
+    margin: 20px 0;
+    font-weight: 500;
+}
+
+main.contactPage h4:nth-of-type(1) {
+    margin: 150px 0 20px 0;
+}
+
+main.contactPage p {
+    font-size: 1.4rem;
+}
+
+main.contactPage .contactTypes {
+    padding: 50px;
+}
+
+.contactTypes > div {
+    float: left;
+    width: 33.33%;
+    padding: 50px;
+}
+
+.contactTypes .typeAddress {
+    border-left: 1px solid rgba(204, 204, 204, 0.5);
+    border-right: 1px solid rgba(204, 204, 204, 0.5);
+}
+
+.contactTypes svg {
+    font-size: 4.5rem;
+    margin-bottom: 10px;
+}
+
+.contactTypes h6 {
+    letter-spacing: 0.5rem;
+    margin: 10px 0;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.contactTypes a {
+    color: #666666;
+    letter-spacing: .07rem;
+}
+
+form.contactUs {
+    margin: 50px 0 100px 0;
+    font-size: 1.4rem;
+}
+
+form.contactUs input:not(.submit) {
+    width: calc(33.33% - 20px);
+    margin-right: 20px;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+form.contactUs #subject {
+    margin-right: 0;
+}
+
+form.contactUs textarea {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    resize: none;
+}
+
+form.contactUs .submit {
+    background: none;
+    padding: 10px 0;
+    margin-top: 50px;
+    border: none;
+    border-bottom: 2px solid #000;
+    font-family: "Montserrat", sans-serif; 
+    font-weight: 500; 
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+}
+
+/* - - - - - - - - - - BLOG.HTML STYLES - - - - - - - - - - */
