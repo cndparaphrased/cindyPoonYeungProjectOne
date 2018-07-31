@@ -195,14 +195,14 @@ footer .subscription form {
     margin-top: 25px;
 }
 
-footer input[type=email] {
+form.subscribe input[type=email] {
     color: #666666;
     font-size: 1.3rem;
     padding: 15px 20px;
     border: none;
 }
 
-footer input[type=submit] {
+form.subscribe input[type=submit] {
     background: #c3dab7 url(../assets/arrow.png) center/50% no-repeat;
     border: none;
     float: right;
@@ -215,6 +215,61 @@ footer h1 {
     padding: 50px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 1.4rem;
+}
+
+/* FORM STYLES */
+form.generalForm {
+    margin: 75px 0 100px 0;
+    font-size: 0;
+}
+
+form.generalForm input, form.generalForm textarea {
+    font-size: 1.4rem;
+    color: #999999;
+}
+
+form.generalForm input:not(.submit):focus,
+form.generalForm textarea:focus {
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+
+form.generalForm input:not(.submit) {
+    width: calc(96% / 3);
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+form.generalForm input[type=email] {
+    margin: 0 2%;
+}
+
+form.generalForm textarea {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    resize: none;
+}
+
+form.generalForm .submit {
+    background: none;
+    color: #000;
+    padding: 8px 0;
+    margin-top: 50px;
+    border: none;
+    border-bottom: 1px solid #000;
+    font-family: "Montserrat", sans-serif; 
+    font-weight: 400; 
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+}
+
+form.generalForm .submit:hover {
+    border-bottom: 2px solid #000;
+    font-weight: 500;
 }
 
 /* - - - - - - - - - - INDEX.HTML STYLES - - - - - - - - - - */
@@ -455,14 +510,27 @@ section.portfolio .portfolioL {
 }
 
 /* - - - - - - - - - - CONTACT.HTML STYLES - - - - - - - - - - */
+
+    /* MAIN STYLES */
 main.contactPage .wrapper {
     position: relative;
 }
 
+main.contactPage {
+    background: url(../assets/contact-1.jpeg) top center no-repeat;
+}
+
 main.contactPage h2 {
+    padding: 125px 0 75px 0;
+}
+
+main.contactPage h2::before {
+    content: "";
+    width: 43px;
+    height: 3px;
+    background-color: #000;
     position: absolute;
-    top: -250px;
-    left: 0;
+    top: 80px;
 }
 
 main.contactPage h4 {
@@ -470,12 +538,10 @@ main.contactPage h4 {
     font-weight: 500;
 }
 
-main.contactPage h4:nth-of-type(1) {
-    margin: 150px 0 20px 0;
-}
-
 main.contactPage p {
     font-size: 1.4rem;
+    color: #999;
+    letter-spacing: .03rem;
 }
 
 main.contactPage .contactTypes {
@@ -505,47 +571,214 @@ main.contactPage .contactTypes {
     font-weight: 500;
 }
 
+main.contactPage .contactTypes p {
+    color: #666666;
+}
+
 .contactTypes a {
     color: #666666;
     letter-spacing: .07rem;
 }
 
-form.contactUs {
-    margin: 50px 0 100px 0;
-    font-size: 1.4rem;
-}
-
-form.contactUs input:not(.submit) {
-    width: calc(33.33% - 20px);
-    margin-right: 20px;
-    padding: 10px 0;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-}
-
-form.contactUs #subject {
-    margin-right: 0;
-}
-
-form.contactUs textarea {
-    width: 100%;
-    margin-top: 20px;
-    padding: 10px 0;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-    resize: none;
-}
-
 form.contactUs .submit {
-    background: none;
-    padding: 10px 0;
-    margin-top: 50px;
-    border: none;
     border-bottom: 2px solid #000;
-    font-family: "Montserrat", sans-serif; 
     font-weight: 500; 
-    letter-spacing: .2rem;
-    text-transform: uppercase;
+}
+
+form.contactUs .submit:hover {
+    font-weight: 700;
 }
 
 /* - - - - - - - - - - BLOG.HTML STYLES - - - - - - - - - - */
+    /* HEADER STYLES */
+header.blogPage {
+    background: url(../assets/blog-1.jpeg) center/cover no-repeat;
+    min-height: 100vh;
+}
+
+    /* MAIN STYLES */
+main.blogPage h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 60px 0;
+    padding-bottom: 20px;
+    border-bottom: 1.5px solid rgba(204, 204, 204, 0.8);
+}
+
+        /* CURRENT ARTICLE STARTS */
+article.current {
+    margin: 100px 0;
+}
+
+article.current .blogNavPath {
+    margin: 10px 0;
+    color: #999999;
+    letter-spacing: .05rem;
+}
+
+article.current p,
+.blogNavPath a {
+    color: #999999;
+}
+
+.blogNavPath a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+article.current .blogNavPath p {
+    display: inline-block;
+    font-size: 1.4rem;
+    color: #000;
+}
+
+article.current .postInfo {
+    margin: 50px 0;
+    padding: 20px 0;
+    border-bottom: 1.5px solid rgba(204, 204, 204, 0.8);
+}
+
+.postInfo .postInfoL,
+.postInfoL img,
+.postInfoData {
+    float: left;
+}
+
+.postInfo .postInfoR {
+    float: right;
+}
+
+.postInfoL img {
+    border-radius: 50%;
+    margin-right: 25px;
+}
+
+.postInfoR .postInfoData {
+    padding: 0 25px;
+    margin-left: 50px;
+}
+
+.postInfoData {
+    position: relative;
+    top: 50%;
+    transform: translateY(50%);
+}
+
+.postInfoData h5,
+.sharePost h5 {
+    letter-spacing: .05rem;
+}
+
+.postInfoData p {
+    font-size: 1.3rem;
+}
+
+article.current .currentPost p {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.currentPost p:first-child {
+    font-weight: 700;
+    color: #000;
+}
+
+.sharePost h5,
+.sharePost ul,
+.sharePost ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.sharePost svg {
+    font-size: 1.6rem;
+    margin-right: 5px;
+}
+
+        /* RELATED POSTS ASIDE STYLES */
+.relatedPostsGrid figure {
+    float: left;
+}
+
+.relatedPostsGrid figure:nth-of-type(2) {
+    margin: 0 2.5%;
+}
+
+.relatedPostsGrid figcaption {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+    margin: 25px 0;
+}
+
+        /* COMMENTS SECTION STARTS */
+section.comments {
+    margin: 75px 0;
+}
+
+section.comments .comment {
+    margin-bottom: 30px;
+}
+
+.comment img {
+    float: left;
+}
+
+.comment .commentContainer {
+    float: right;
+    width: 90%;
+    background-color: #f6f6f6;
+    padding: 20px 25px 40px 25px;
+    position: relative;
+}
+
+.comment .commentContainer::before {
+    content: "";
+    display: block;
+    width: 0;
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    border-width: 10px 30px 10px 0;
+    border-style: solid;
+    border-top-color: transparent;
+    border-right-color: #f6f6f6;
+    border-bottom-color: transparent;
+    border-left-color: #f6f6f6;
+}
+
+.commentContainer p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.4rem;
+    line-height: 2.5;
+}
+
+.commentContainer p:first-child {
+    text-transform: uppercase;
+    color: #000;
+    display: inline-block;
+}
+
+.commentContainer a {
+    font-style: italic;
+    color: #405e31;
+    letter-spacing: .05rem;
+}
+
+.commentContainer a:hover {
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.commentContainer p:nth-of-type(2) {
+    font-size: 1.3rem;
+    color: #666666;
+    letter-spacing: .05rem;
+}
+
+.commentContainer p:last-child {
+    font-size: 1.1rem;
+    color: #999;
+}
+

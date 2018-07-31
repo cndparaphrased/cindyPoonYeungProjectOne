@@ -7,7 +7,7 @@
     <link type="image/png" href="assets/favicon.png" rel="icon">
     <title>Creative Blog</title>
     <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Open+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
@@ -42,7 +42,7 @@
     <!-- HEADER ENDS -->
 
     <!-- MAIN STARTS -->
-    <main>
+    <main class="blogPage">
         <div class="wrapper">
             <!-- CURRENT ARTICLE STARTS -->
             <article class="current">
@@ -53,15 +53,15 @@
                     <p>How to Run a Creative Agency</p>
                 </div>
 
-                <div class="postInfo">
-                    <div class="postInfoL">
+                <div class="postInfo clearfix">
+                    <div class="postInfoL clearfix">
                         <img src="assets/blog-2.jpeg" alt="Alex Mack">
                         <div class="postInfoData">
                             <h5>Alex</h5>
                             <p>Administrator</p>
                         </div>
                     </div>
-                    <div class="postInfoR">
+                    <div class="postInfoR clearfix">
                         <div class="postInfoData">
                             <h5>Date</h5>
                             <p>July 31, 2018</p>
@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="sharePost">
-                    <h5>Share</h5>
+                    <h5>Share:</h5>
                     <ul class="social">
                         <li>
                             <a href="http://facebook.com" target="_blank">
@@ -110,7 +110,7 @@
             <!-- RELATED POSTS ASIDE STARTS -->
             <aside class="relatedPosts">
                 <h3>Related Posts</h3>
-                <div class="relatedPostsGrid">
+                <div class="relatedPostsGrid clearfix">
                     <figure>
                         <img src="assets/blog-3.jpeg" alt="White desk with a laptop and three plants on it; a lamp hovers overhead">
                         <figcaption>July 25, 2018</figcaption>
@@ -130,7 +130,7 @@
             <!-- COMMENTS SECTION STARTS -->
             <section class="comments">
                 <h3>02 Comments</h3>
-                <div class="commentOne">
+                <div class="comment commentOne clearfix">
                     <img src="assets/blog-6.jpeg" alt="Avatar of user Daniel Vandaft">
                     <div class="commentContainer">
                         <p>Daniel Vandaft</p>
@@ -139,7 +139,7 @@
                         <p>Jul 17, 2015 at 15 hours ago</p>
                     </div>
                 </div>
-                <div class="commentTwo">
+                <div class="comment commentTwo clearfix">
                     <img src="assets/blog-7.jpeg" alt="Avatar of user Daniel Vandaft">
                     <div class="commentContainer">
                         <p>Jenifer Loopz</p>
@@ -154,7 +154,7 @@
             <!-- LEAVE A COMMENT SECTION STARTS -->
             <section class="leaveComment">
                 <h3>Leave a comment</h3>
-                <form action="creativeagency.php" method="POST" class="commentsForm" name="commentsForm">
+                <form action="creativeagency.php" method="POST" class="commentsForm generalForm" name="commentsForm">
                     <label for="name" class="visuallyhidden">Name</label>
                     <input type="text" id="name" name="name" placeholder="Enter your name" required="true">
                 
@@ -165,7 +165,7 @@
                     <input type="text" id="subject" name="subject" placeholder="Subject (Optional)">
                 
                     <textarea name="message" cols="30" rows="10" placeholder="Here goes your comment"></textarea>
-                    <input type="submit" value="Submit comment">
+                    <input type="submit" class="submit" value="Submit comment">
                 </form>
             </section>
             <!-- LEAVE A COMMENT SECTION ENDS -->
