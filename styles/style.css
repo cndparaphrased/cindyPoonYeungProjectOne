@@ -13,7 +13,8 @@ html {
 
 body {
 	font-family: "Open Sans", sans-serif;
-	font-size: 1.6rem;
+    font-size: 1.6rem;
+    margin: 0 auto;
 }
 
 img {
@@ -114,6 +115,15 @@ header h1 {
 
 .mainNavR .navShopping {
     position: relative;
+}
+
+.mainNavR .navShopping::after {
+    content: "2";
+    font-size: 1rem;
+    color: #000;
+    position: absolute;
+    top: 12px;
+    left: 15px;
 }
 
 .navShopping .fa-circle {
@@ -288,7 +298,18 @@ section.intro {
 }
 
 section.intro .wrapper {
+    position: relative;
     padding: 20px 120px;
+}
+
+section.intro .wrapper::before {
+    content: "";
+    width: 1px;
+    height: 120px;
+    position: absolute;
+    left: 50%;
+    top: -60px;
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .introPhoto {
@@ -433,10 +454,21 @@ section.team .wrapper {
     clear: both;
     padding: 100px 0;
     text-align: center;
+    position: relative;
 }
 
 section.team h3 {
     margin: 25px;
+}
+
+section.team .wrapper::before {
+    content: "";
+    width: 1px;
+    height: 75px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.3);
 }
 
 section.team .gridTop,
@@ -605,7 +637,7 @@ main.blogPage h3 {
     border-bottom: 1.5px solid rgba(204, 204, 204, 0.8);
 }
 
-        /* CURRENT ARTICLE STARTS */
+        /* CURRENT ARTICLE STYLES */
 article.current {
     margin: 100px 0;
 }
@@ -712,7 +744,7 @@ article.current .currentPost p {
     margin: 25px 0;
 }
 
-        /* COMMENTS SECTION STARTS */
+        /* COMMENTS SECTION STYLES */
 section.comments {
     margin: 75px 0;
 }
